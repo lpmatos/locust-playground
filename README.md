@@ -2,6 +2,10 @@
   <img alt="locust" src="https://miro.medium.com/max/1149/1*8RGtKlAWyEiEhiG3-aHt_g.jpeg" width="250px" float="center"/>
 </p>
 
+<p align="center">
+  <img alt="locust" src="docs/QRCode.png" width="200px" float="center"/>
+</p>
+
 <h1 align="center">Welcome to Locust Playground repository</h1>
 
 > Demo using locust.
