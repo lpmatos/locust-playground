@@ -13,21 +13,21 @@
   <a href="#how-to-contribute">How to contribute</a>
 </p>
 
-## Options
+## QRCode
 
 <details>
-  <summary>💻 QRCode</summary>
+  <br>
+  <summary>💻 Repository</summary>
   <p align="left">
-    <img alt="locust" src="docs/QRCode.png" width="250px" float="center"/>
+    <img alt="locust" src="docs/GitHub.png" width="250px" float="center"/>
   </p>
 </details>
 
 <details>
+  <br>
   <summary>☕ Buy me a coffee</summary>
   <p align="left">
-    Pull requests are welcome. If you'd like to support the work and buy me a ☕, I greatly appreciate it!
-    <a href="https://www.buymeacoffee.com/EatdMck" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 100px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" >
-    </a>
+    <img alt="locust" src="docs/By me a Coffe.png" width="250px" float="center"/>
   </p>
 </details>
 
