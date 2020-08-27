@@ -2,6 +2,10 @@
   <img alt="locust" src="https://miro.medium.com/max/1149/1*8RGtKlAWyEiEhiG3-aHt_g.jpeg" width="250px" float="center"/>
 </p>
 
+<p align="center">
+  <img alt="locust" src="docs/GitHub.png" width="125px" float="center"/>
+</p>
+
 <h1 align="center">Welcome to Locust Playground repository</h1>
 
 > Demo using locust.
@@ -11,13 +15,6 @@
 <p align="left">
   <a href="#description">Description</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#how-to-contribute">How to contribute</a>
-</p>
-
-## QRCode
-
-<p align="center">
-  <img alt="locust" src="docs/GitHub.png" width="250px" float="center"/>
-  <img alt="locust" src="docs/By me a Coffe.png" width="250px" float="center"/>
 </p>
 
 ## Getting Started
@@ -56,6 +53,12 @@ You must send the project to your GitHub after the modifications
 > 2. git commit -m "Added - Fixing somethings"
 > 3. git push origin master
 >
+
+## Buy me a coffee
+
+<p align="left">
+  <img alt="locust" src="docs/By me a Coffe.png" width="250px" float="center"/>
+</p>
 
 ## Author
 
