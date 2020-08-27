@@ -57,7 +57,7 @@ You must send the project to your GitHub after the modifications
 ## Buy me a coffee
 
 <p align="left">
-  <img alt="locust" src="docs/By me a Coffe.png" width="250px" float="center"/>
+  <img alt="locust" src="docs/By me a Coffe.png" width="150px" float="center"/>
 </p>
 
 ## Author
