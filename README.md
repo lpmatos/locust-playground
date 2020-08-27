@@ -15,21 +15,10 @@
 
 ## QRCode
 
-<details>
-  <br>
-  <summary>💻 Repository</summary>
-  <p align="left">
-    <img alt="locust" src="docs/GitHub.png" width="250px" float="center"/>
-  </p>
-</details>
-
-<details>
-  <br>
-  <summary>☕ Buy me a coffee</summary>
-  <p align="left">
-    <img alt="locust" src="docs/By me a Coffe.png" width="250px" float="center"/>
-  </p>
-</details>
+<p align="center">
+  <img alt="locust" src="docs/GitHub.png" width="250px" float="center"/>
+  <img alt="locust" src="docs/By me a Coffe.png" width="250px" float="center"/>
+</p>
 
 ## Getting Started
 
