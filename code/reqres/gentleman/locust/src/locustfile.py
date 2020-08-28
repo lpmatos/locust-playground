@@ -1,7 +1,7 @@
 import logging
 from config import Config
 from typing import NoReturn
-from locust import HttpUser, SequentialTaskSet, TaskSet, task, between
+from locust import HttpUser, SequentialTaskSet, TaskSet, task, between, events
 
 # ==============================================================================
 # GLOBAL
@@ -40,6 +40,32 @@ logging.basicConfig(
 )
 
 # ==============================================================================
+# LOCUST EVENTS
+# ==============================================================================
+
+@events.test_start.add_listener
+def on_test_start(**kwargs):
+  print("A new Load Test with Locust is starting")
+
+@events.test_stop.add_listener
+def on_test_stop(**kwargs):
+  print("Load Test with Locust is ending")
+
+@events.request_success.add_listener
+def my_success_handler(request_type, name, response_time, response_length, **kw):
+  print("Successfully made a request to: %s" % name)
+
+from locust import events
+
+@events.quitting.add_listener
+def _(environment, **kw):
+  if environment.stats.total.fail_ratio > 0.01:
+    logging.error("Test failed due to failure ratio > 1%")
+    environment.process_exit_code = 1
+  else:
+      environment.process_exit_code = 0
+
+# ==============================================================================
 # FUNCTIONS
 # ==============================================================================
 
@@ -58,10 +84,10 @@ class ListUserTasks(TaskSet):
 
   def login(self) -> NoReturn:
     for index, user in enumerate(LIST_CREDENTIALS):
+      email = user["email"]
+      logging.info(f"User {email} - Position User {index}")
       with self.client.post("/api/login", user) as response:
-        if response.status_code == 200:
-          logging.info(f"Logado com sucesso! - Position {index}")
-        else:
+        if response.status_code != 200:
           logging.error("Falha ao logar")
 
   tasks = {get_list_users: 3}
@@ -77,17 +103,13 @@ class UserTasks(SequentialTaskSet):
 
   def register(self) -> NoReturn:
     with self.client.post("/api/register", CREDENTIALS) as response:
-      if response.status_code == 200:
-        logging.info("Registrado com sucesso!")
-      else:
+      if response.status_code != 200:
         logging.error("Falha ao registrar")
 
   @task
   def login(self) -> NoReturn:
     with self.client.post("/api/login", CREDENTIALS) as response:
-      if response.status_code == 200:
-        logging.info("Logado com sucesso!")
-      else:
+      if response.status_code != 200:
         logging.error("Falha ao logar")
 
   tasks = [get_list_users]
@@ -101,5 +123,5 @@ class UserTasks(SequentialTaskSet):
 # ==============================================================================
 
 class WebsiteUser(HttpUser):
-  tasks = [ListUserTasks]
+  tasks = [UserTasks]
   wait_time = between(5, 15)
