@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img alt="locust" src="docs/GitHub.png" width="125px" float="center"/>
+  <img alt="locust" src="docs/By me a Coffe.png" width="150px" float="center"/>
 </p>
 
 <h1 align="center">Welcome to Locust Playground repository</h1>
@@ -83,12 +83,6 @@ You must send the project to your GitHub after the modifications
 > 2. git commit -m "Added - Fixing somethings"
 > 3. git push origin master
 >
-
-## Buy me a coffee
-
-<p align="left">
-  <img alt="locust" src="docs/By me a Coffe.png" width="150px" float="center"/>
-</p>
 
 ## Author
 
