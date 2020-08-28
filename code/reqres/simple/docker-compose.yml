@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+
+  master:
+    build:
+      context: ./locust
+      dockerfile: Dockerfile
+    ports: [ "8089:8089" ]
+    command: --conf /mnt/locust/.master.conf
+  
+  worker-1:
+    build:
+      context: ./locust
+      dockerfile: Dockerfile
+    command: --conf /mnt/locust/.worker.conf
+
+  worker-2:
+    build:
+      context: ./locust
+      dockerfile: Dockerfile
+    command: --conf /mnt/locust/.worker.conf
+
+  worker-3:
+    build:
+      context: ./locust
+      dockerfile: Dockerfile
+    command: --conf /mnt/locust/.worker.conf
